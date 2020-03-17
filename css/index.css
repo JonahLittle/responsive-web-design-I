@@ -2,8 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+html, body, div, span, applet, object, iframe, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -51,10 +50,10 @@ table {
 }
 html, body {
     height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: "Titillium Web", sans-serif;
 }
 h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
+    font-family: "Bangers", cursive;
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
@@ -63,14 +62,16 @@ body {
 	max-width: 100%;
 	margin: auto;
 	text-align: center;
+	margin: 2rem;
 }
 p {
 	margin: 20px 20px 0 0;
 }
 hr {
+    color: black;
 }
-h3 {
-	font-family: 'Open-Sans', sans-serif;
+h3, h1{
+	font-family: "Open-Sans" sans-serif;
 	font-weight: 600;
 }
 /* Nav Section */
@@ -78,12 +79,10 @@ nav {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	position: fixed;
-	top: 0;
 	padding: 10px 0;
 	text-align: left;
 	z-index: 1;
-	width: 900px;
+	width: 100%;
 	background-color: white;
 }
 nav a.nav-link {
@@ -95,39 +94,38 @@ nav img {
 }
 /* Header Section */
 	/* home page header css */
-.home-header {
-	display: flex;
-	margin-top: 110px;
-	background-size: 55%;
-    z-index: -1;
-}
-.main-header {
-	display: flex;
-	flex-direction: column;
-	width: 70%;
-	justify-content: center;
-	margin: auto;
-}
-.home-header h1 {
-	font-size: 60px;
-	font-family: 'Open-Sans', sans-serif;
-	text-align: center;
-	color: rgb(2, 30, 56);
-	background-color: rgba(255, 255, 255, 0.8);
-	border-radius: 10px;
-	padding: 20px;
-}
-.main-header button {
-	margin: auto;
-	background-color: rgb(255, 255, 255);
-	border: 1px solid rgb(97, 97, 97);
-	color: rgb(27, 27, 27);
-	padding: 7px 40px;
-	text-align: center;
-	text-decoration: none;
-	font-size: 16px;
-	width: 50%;
-	cursor: pointer;
+	.top {
+		padding: 4% 3%;
+		margin: 6% 0px;
+		position: relative;
+		width: 100%;
+		margin:12% 0;
+	}
+	.top div {
+		font-size: 80px;
+		text-align: center;
+		position: relative;
+		right: 23%;
+		margin-top: 60px;
+	}
+	.top h1 {
+		font-size:4rem;
+		text-align:center;
+	}
+	.top button {
+		border: 1px solid black;
+		width: 17%;
+		height:1.5rem;
+		color: grey;
+		background-color: white;
+		position: absolute;
+		left: 42%;
+	}
+	.top img {
+		width:40%;
+		position: absolute;
+		bottom: -6%;
+		left: 55%;
 }
 /* Upper Content and Lower Content Sections */
 	/* home page content section */
@@ -162,8 +160,11 @@ footer {
 	padding-bottom: 100px;
 }
 
-/* Responsive design */
+/* THIS IS FOR IF YOU USE LIKE A TABLET OR SOMETHING */
 @media(max-width: 800px){
+    body{
+        margin:20px;
+    }
     .home-link{
         order:-1;
         display:block;
@@ -201,4 +202,34 @@ footer {
     .middle-img{
 
     }
+}
+/* THIS IS THE ONE FOR THE PHONE THING */
+@media(max-width: 500px){
+    nav{
+        display:flex;
+		flex-direction:column;
+		margin:0 auto;
+	}
+	.home-link{
+		padding:15px;
+		width:100%;
+		justify-content:center ;
+		border-bottom: 2px solid lightgrey;
+	}
+    .nav-link{
+        border-bottom: 2px solid lightgrey;
+		width:100%;
+		text-align:center;
+		padding-bottom: 23px;
+	}
+	.home-header{
+		margin-top:550px;
+	}
+	.content-section{
+		display:block;
+	}
+	.content-section div{
+		width:100%;
+	}
+}
 }
